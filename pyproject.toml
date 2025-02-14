@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "ai-calling-app"
+version = "0.1.0"
+description = "AI-powered calling assistant"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^2.2.5"
+flask-cors = "^3.0.10"
+requests = "^2.28.1"
+google-auth = "^2.6.0"
+google-auth-oauthlib = "^0.7.0"
+google-auth-httplib2 = "^0.1.0"
+google-api-python-client = "^2.50.0"
+python-dotenv = "^0.21.0"  # ✅ Corrected package name
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
