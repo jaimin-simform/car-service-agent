@@ -20,16 +20,19 @@ This guide will walk you through **setting up the project, configuring Google Ca
 │   │   ├── openai_service.py    # OpenAI realtime API integration
 │   │   ├── email_service.py     # SMTP email configuration
 │   │   ├── config.py            # Loads configuration from `.env`
-│   ├── configuration.json       # Stores application settings (excluded from Docker image)
+│   ├── 📂 static
+│   │   ├── 📂 assets             # Audio & media files
+│   │   ├── 📂 js                 # JavaScript files
+│   │   ├── 📂 css                # CSS stylesheets
+│   ├── 📂 templates
+│   │   ├── call.html            # Frontend UI
+│   ├── configuration.json       # Stores application settings (excluded from Git)
 │   ├── main.py                  # Flask entry point
-├── 📂 templates
-│   ├── call.html                 # Frontend UI
-├── 📂 static
-│   ├── 📂 js                      # JavaScript files
-│   ├── 📂 css                     # CSS stylesheets
-├── .env                          # Environment variables (excluded from Docker image)
+├── .env                          # Environment variables (excluded from Git)
+├── docker-compose.yml            # Docker configuration (Optional)
 ├── pyproject.toml                # Poetry dependencies
 ├── poetry.lock                   # Poetry lock file
+├── .gitignore                     # Excludes sensitive files from Git
 └── README.md                     # This guide
 ```
 ---
