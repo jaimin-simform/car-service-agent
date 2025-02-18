@@ -16,8 +16,8 @@ def index():
 @main_bp.route('/session', methods=['GET'])
 def session():
     try:
-        response = get_openai_session()  # ✅ This now returns a Flask response
-        return response  # ✅ Return the Flask response directly
+        response = get_openai_session()  #returns a Flask response
+        return response  
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
@@ -28,7 +28,7 @@ def email():
     return send_email(data['message'])
 
 
-# ✅ Add Google OAuth Routes Here
+# Add Google OAuth Routes Here
 @main_bp.route('/authorize')
 def authorize():
     try:
