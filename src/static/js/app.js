@@ -60,14 +60,14 @@ async function initOpenAIRealtime() {
     try {
         const tokenResponse = await fetch("session");
         const data = await tokenResponse.json();
-        console.log("Debugging API Response:", data); // ✅ Check API response
+        console.log("Debugging API Response:", data); 
 
         if (!data.client_secret || !data.client_secret.value) {
             throw new Error("Invalid API response: client_secret is missing");
         }
 
         const EPHEMERAL_KEY = data.client_secret.value;
-        console.log("Using EPHEMERAL_KEY:", EPHEMERAL_KEY); // ✅ Debug key assignment
+        console.log("Using EPHEMERAL_KEY:", EPHEMERAL_KEY); 
 
         peerConnection = new RTCPeerConnection();
         
