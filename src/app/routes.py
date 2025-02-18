@@ -44,7 +44,7 @@ def authorize():
         with open("token.json", "w") as token_file:
             token_file.write(creds.to_json())
 
-        return jsonify({'message': 'Authorization successful! You can now book calendar events.'}), 200  # ✅ Return JSON response
+        return jsonify({'message': 'Authorization successful! You can now book calendar events.'}), 200 
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
