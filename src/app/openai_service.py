@@ -40,19 +40,18 @@ def get_openai_session():
         }
 
         response = requests.post(url, json=payload, headers=headers)
-         # ✅ Check if API response is valid JSON
+         # Check if API response is valid JSON
         try:
             data = response.json()
         except ValueError:
             return jsonify({"error": "Invalid JSON response from OpenAI API"}), 500
 
-        # ✅ Debugging
         print("OpenAI Response:", data)
 
         if "client_secret" not in data:
             return jsonify({"error": "Missing client_secret in OpenAI API response"}), 500
 
-        return jsonify(data)  # ✅ Ensure a proper Flask response
+        return jsonify(data)  
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
